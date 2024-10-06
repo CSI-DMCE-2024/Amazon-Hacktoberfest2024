@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 body {
+    background-color: #f1f1f1;
     font-family: Arial, sans-serif;
 }
 
@@ -45,7 +48,7 @@ body {
     color: #1ab188; /* Link hover color */
 }
 
-/* Responsive styles */
+/* Responsive Navbar styles */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack links vertically */
@@ -59,5 +62,110 @@ body {
     
     .navbar-links li {
         margin: 10px 0; /* Space between links */
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-top {
+    text-align: center;
+    padding: 10px;
+    background-color: #37475a;
+    cursor: pointer;
+}
+
+.footer-top p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 150px; /* Ensures the columns don't get too narrow */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #131a22;
+    font-size: 14px;
+}
+
+/* Responsive Footer Design */
+
+/* For small devices like smartphones */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 20px 0; /* Adds space between each column when stacked */
+    }
+
+    .footer-top p {
+        font-size: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+/* For medium devices like tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-links {
+        justify-content: space-between; /* Adjusts spacing between columns */
+    }
+
+    .footer-column {
+        margin: 10px 20px;
     }
 }

@@ -48,14 +48,14 @@ function renderCart() {
 
         const itemDiv = document.createElement("div");
         itemDiv.classList.add("cart-item");
-        
+
         itemDiv.innerHTML = `
             ${item.name} - $${item.price} x 
             <input type="number" value="${item.quantity}" min="1" style="width: 50px;" 
                 onchange="updateQuantity('${item.name}', this.value)">
             <button onclick="removeFromCart('${item.name}')">Remove</button>
         `;
-        
+
         cartItemsContainer.appendChild(itemDiv);
     });
 

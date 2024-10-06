@@ -5,11 +5,13 @@
     border: 1px solid #ccc;
     display: inline-block;
 }
+
 .cart {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #333;
 }
+
 .cart-item {
     margin: 5px 0;
     display: flex;

@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #232F3E;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li{
+    display: inline;
+}
+
+.navbar-links a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover{
+    background-color: #FF9900;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+.form-box{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px; 
+    text-align: center;
+}
+
+h1{
+    color: black;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #e58e00;
+}
+
+.home-button{
+    margin-top: 20px;
+}
+
+.btn-home{
+    display: inline-block;
+    background-color: #FF9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn-home:hover{
+    background-color: #e58e00;
+}
+
+@media screen and (max-width: 768px){
+    .form-box {
+        padding: 20px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

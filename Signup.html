@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
- <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
-    <!----signup page with hover effect and responsiveness-->
-    <h1>signup</h1>
+    <div class="container">
+        <div class="form-box">
+            <h1>Sign Up</h1>
+            <form action="/submit" method="POST">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <div class="input-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+
+            <div class="home-button">
+                <button id="homeButton" class="btn-home">Go to Home Page</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = '/index.html';
+        });
+    </script>
 </body>
 </html>

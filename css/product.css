@@ -17,3 +17,175 @@
     display: flex;
     justify-content: space-between;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Navbar background color */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: white; /* Brand color */
+    font-size: 1.5em;
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align links in a row */
+}
+
+.navbar-links li {
+    margin-left: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em;
+}
+
+.navbar-links a:hover {
+    color: #1ab188; /* Link hover color */
+}
+
+/* Responsive Navbar styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+    }
+    
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px;
+        align-items: center; /* Center the links */
+    }
+    
+    .navbar-links li {
+        margin: 10px 0; /* Space between links */
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-top {
+    text-align: center;
+    padding: 10px;
+    background-color: #37475a;
+    cursor: pointer;
+}
+
+.footer-top p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 150px; /* Ensures the columns don't get too narrow */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #131a22;
+    font-size: 14px;
+}
+
+/* Responsive Footer Design */
+
+/* For small devices like smartphones */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 20px 0; /* Adds space between each column when stacked */
+    }
+
+    .footer-top p {
+        font-size: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+/* For medium devices like tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-links {
+        justify-content: space-between; /* Adjusts spacing between columns */
+    }
+
+    .footer-column {
+        margin: 10px 20px;
+    }
+}

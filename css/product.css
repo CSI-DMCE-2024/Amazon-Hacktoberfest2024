@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -53,8 +52,9 @@ h1 {
 
 .add-to-cart:hover {
     background-color: #0056b3;
-=======
-/*temporary styling for the sample products */
+}
+
+/* Temporary styling for sample products */
 .product {
     margin: 10px;
     padding: 10px;
@@ -73,20 +73,18 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-/*----footer---*/
+
+/* Footer Styles */
 footer {
-    
     font-family: Arial, sans-serif;
 }
 
-.amazon-footer { 
-    padding-top: 400px;                                 
+.amazon-footer {
     background-color: #f0f0f0;
     padding: 30px;
 }
 
 .footer-container {
- 
     display: flex;
     justify-content: space-between;
 }
@@ -133,9 +131,10 @@ footer {
     margin-right: 10px;
     color: #333;
     font-size: 20px;
-}/* Responsive Styles */
-@media screen and (max-width: 1200px)
- {
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
     .footer-container {
         flex-wrap: wrap;
     }
@@ -159,5 +158,4 @@ footer {
     .footer-bottom {
         font-size: 14px;
     }
-
 }

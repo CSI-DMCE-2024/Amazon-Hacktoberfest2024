@@ -4,12 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-    <!----login us page starts -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Amazon Logo</div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form -->
     <div class="container">
         <div class="login-box">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
@@ -17,32 +29,20 @@
             <form>
                 <label for="username">Email or mobile phone number</label>
                 <input type="text" id="username" placeholder="Enter your email or mobile" required>
-
                 <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Enter your password" required>
-
                 <button type="submit" class="login-button">Login</button>
             </form>
 
-            <p class="help-text">
-                By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
-            </p>
-
-            <p class="help-text">
-                <a href="#">Forgot your password?</a>
-            </p>
+            <p class="help-text">By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+            <p class="help-text"><a href="#">Forgot your password?</a></p>
 
             <div class="new-account">
                 <p>New to Amazon?</p>
-                <button class="create-account-button">Create your Amazon account</button>
+                <a href="signup.html"><button class="create-account-button">Create your Amazon account</button></a>
             </div>
         </div>
     </div>
-
 </body>
 
-</html> 
-
-
 </html>
-

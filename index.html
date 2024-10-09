@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon clone</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <!---Add your navbar here with all the pages linked to it-->
     <nav class="navbar">
-        <div class="navbar-brand">Amazon logo</div>
-        <ul class="navbar-links">
-
-            <li><a href="\index.html">Home</a></li>
-            <li><a href="\product.html">Products</a></li>
-            <li><a href="\login.html">Login</a></li>
-            <li><a href="\Signup.html">Signup</a></li>
-            <li><a href="\contactus.html">Contact Us</a></li>
-
-           
-
-        </ul>
+      <div class="navbar-brand">Amazon logo</div>
+      <ul class="navbar-links">
+        <li><a href="\index.html">Home</a></li>
+        <li><a href="\product.html">Products</a></li>
+        <li><a href="\login.html">Login</a></li>
+        <li><a href="\Signup.html">Signup</a></li>
+        <li><a href="\contactus.html">Contact Us</a></li>
+      </ul>
     </nav>
 
     <!----Add cards for accesories like watch mobile et-->
+    <div class="product">
+      <h2>Product 1</h2>
+      <p>Price: $10</p>
+      <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
 
+    <div class="product">
+      <h2>Product 2</h2>
+      <p>Price: $15</p>
+      <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
 
+    <div class="product">
+      <h2>Product 3</h2>
+      <p>Price: $20</p>
+      <button onclick="addToCart('Product 3', 20)">Add to Cart</button>
+    </div>
 
     <!---ends--->
 
-
     <!----Footer-->
     <footer class="amazon-footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Get to Know Us</h3>
-                <ul>
-                    <li><a href="#">About Amazon</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Amazon Devices</a></li>
-                    <li><a href="#">Amazon Science</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Make Money with Us</h3>
-                <ul>
-                    <li><a href="#">Sell on Amazon</a></li>
-                    <li><a href="#">Sell Your Books</a></li>
-                    <li><a href="#">Advertise Your Products</a></li>
-                    <li><a href="#">Become an Affiliate</a></li>
-                    <li><a href="#">Self-Publish with Us</a></li>
-                    <li><a href="#">Host an Amazon Hub</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Amazon Payment Methods</h3>
-                <ul>
-                    <li><a href="#">Amazon Pay</a></li>
-                    <li><a href="#">Amazon Gift Card</a></li>
-                    <li><a href="#">Amazon Coins</a></li>
-                </ul>
-            </div>
-           
-            <div class="footer-section">
-                <h3>Need Help?</h3>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Shipping Rates</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                    <li><a href="#">Manage Your Content and Devices</a></li>
-                    <li><a href="#">Amazon Assistant</a></li>
-                </ul>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Get to Know Us</h3>
+          <ul>
+            <li><a href="#">About Amazon</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Releases</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Amazon Devices</a></li>
+            <li><a href="#">Amazon Science</a></li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            <p> &copy; 2023 Amazon.com, Inc. or its affiliates</p>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+        <div class="footer-section">
+          <h3>Make Money with Us</h3>
+          <ul>
+            <li><a href="#">Sell on Amazon</a></li>
+            <li><a href="#">Sell Your Books</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Self-Publish with Us</a></li>
+            <li><a href="#">Host an Amazon Hub</a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h3>Amazon Payment Methods</h3>
+          <ul>
+            <li><a href="#">Amazon Pay</a></li>
+            <li><a href="#">Amazon Gift Card</a></li>
+            <li><a href="#">Amazon Coins</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Need Help?</h3>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Shipping Rates</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Manage Your Content and Devices</a></li>
+            <li><a href="#">Amazon Assistant</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Amazon.com, Inc. or its affiliates</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </footer>
     <!---footer ends-->
-</body>
-
+  </body>
 </html>

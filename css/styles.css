@@ -1,151 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
-
+.product {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  height: 150px;
+  width: 150px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black; /* Navbar background color */
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; /* Navbar background color */
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-brand {
-    color: white; /* Brand color */
-    font-size: 1.5em;
+  color: white; /* Brand color */
+  font-size: 1.5em;
 }
 
 .navbar-links {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Align links in a row */
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Align links in a row */
 }
 
 .navbar-links li {
-    margin-left: 20px; /* Space between links */
+  margin-left: 20px; /* Space between links */
 }
 
 .navbar-links a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1em;
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1em;
 }
 
 .navbar-links a:hover {
-    color: #1ab188; /* Link hover color */
+  color: #1ab188; /* Link hover color */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack links vertically */
-    }
-    
-    .navbar-links {
-        flex-direction: column; /* Stack links vertically */
-        margin-top: 10px;
-        align-items: center; /* Center the links */
-    }
-    
-    .navbar-links li {
-        margin: 10px 0; /* Space between links */
-    }
+  .navbar {
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px;
+    align-items: center; /* Center the links */
+  }
+
+  .navbar-links li {
+    margin: 10px 0; /* Space between links */
+  }
 }
 
 /*----footer---*/
 footer {
-    
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.amazon-footer { 
-    padding-top: 400px;                                 
-    background-color: #f0f0f0;
-    padding: 30px;
+.amazon-footer {
+  padding-top: 400px;
+  background-color: #f0f0f0;
+  padding: 30px;
 }
 
 .footer-container {
- 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-section {
-    width: 20%;
+  width: 20%;
 }
 
 .footer-section h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .footer-section ul li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .social-media {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .social-media a {
-    margin-right: 10px;
-    color: #333;
-    font-size: 20px;
-}/* Responsive Styles */
-@media screen and (max-width: 1200px)
- {
-    .footer-container {
-        flex-wrap: wrap;
-    }
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+} /* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
 
-    .footer-section {
-        width: 50%;
-    }
+  .footer-section {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
+  .footer-container {
+    flex-direction: column;
+  }
 
-    .footer-section {
-        width: 100%;
-    }
+  .footer-section {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .footer-bottom {
-        font-size: 14px;
-    }
+  .footer-bottom {
+    font-size: 14px;
+  }
 }

@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="/css/signup.css">
+    <title>Sign Up Page</title>
+   <link rel="stylesheet" href="/css/signup.css">
 </head>
-
 <body>
-    <!----signup page with hover effect and responsiveness-->
-    <h1>signup</h1>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+        </div>
+    
+        <ul class="navbar-links">
+            <li><a href="\index.html" class="nav-link">Home</a></li>
+            <li><a href="\product.html" class="nav-link">Products</a></li>
+            <li><a href="\login.html" class="nav-link">Login</a></li>
+            <li><a href="\Signup.html" class="nav-link">Signup</a></li>
+            <li><a href="\contactus.html" class="nav-link active">Contact Us</a></li>
+        </ul>
+    
+        <div class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+    <div class="signup-container">
+        <div class="signup-header">
+            <h1>Create Your Account</h1>
+        </div>
+        <form class="signup-form" action="/signup" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
 </body>
-
 </html>

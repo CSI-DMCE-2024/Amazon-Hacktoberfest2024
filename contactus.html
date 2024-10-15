@@ -4,16 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - Amazon Clone</title>
     <link rel="stylesheet" href="/css/contactus.css">
 </head>
 
 <body>
-    <!---contactus page starts here -->
-    <!--ends here-->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+        </div>
+    
+        <ul class="navbar-links">
+            <li><a href="\index.html" class="nav-link">Home</a></li>
+            <li><a href="\product.html" class="nav-link">Products</a></li>
+            <li><a href="\login.html" class="nav-link">Login</a></li>
+            <li><a href="\Signup.html" class="nav-link">Signup</a></li>
+            <li><a href="\contactus.html" class="nav-link active">Contact Us</a></li>
+        </ul>
+    
+        <div class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+
+    <main class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need help, feel free to contact us.</p>
+    
+        <div class="contact-info">
+            <div class="customer-support"> <!-- New class added here -->
+                <h3>Customer Support</h3>
+                <p class="contact-details"> <!-- New class added here -->
+                    <strong>Phone:</strong> +1 234 567 890<br>
+                    <strong>Email:</strong> support@amazonclone.com<br>
+                    <strong>Address:</strong> 123 Amazon St., Seattle, WA 98101
+                </p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+    
+
+    <footer class="amazon-footer">
+        <p>&copy; 2023 Amazon Clone. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/js/contactus.js"></script>
 </body>
 
 </html>
-
-
-

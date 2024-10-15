@@ -88,6 +88,38 @@
         </div>
     </footer>
     <!---footer ends-->
+    <!-- Back to Top Button -->
+      <button
+      style=" position: fixed;
+      bottom: 20px;
+      left: 95%;
+      background-color: rgb(32, 29, 52);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1000;
+      display: none;
+        
+      "onclick="scrollToTop()" id="topBtn" title="Go to top">&#x25B2;</button>
+
+      <!-- Scroll to top script -->
+      <script>
+          window.onscroll = function() {
+              const btn = document.getElementById("topBtn");
+              if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                  btn.style.display = "block";
+              } else {
+                  btn.style.display = "none";
+              }
+          };
+  
+          function scrollToTop() {
+              window.scrollTo({top: 0, behavior: 'smooth'});
+          }
+      </script>
 </body>
 
 </html>

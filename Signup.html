@@ -10,7 +10,36 @@
 
 <body>
     <!----signup page with hover effect and responsiveness-->
-    <h1>signup</h1>
+    <div class="container">
+        <div class="signup-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+            <h2>Create Account</h2>
+            <form>
+                <label for="username">Your Name</label>
+                <input type="text" id="name" placeholder="First and Last Name" required>
+
+                <label for="number">Mobile Number</label>
+                <span>IN +91
+
+                </span>
+                
+                <input type="number" id="number" placeholder="Mobile Number" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="At least 6 characters" required>
+
+                <button type="submit" class="signup-button">Create Account</button>
+            </form>
+
+            <p class="help-text">
+                By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+            </p>
+
+            <p class="help-text">
+                <a href="#">Forgot your password?</a>
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>

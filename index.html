@@ -5,24 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon clone</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!---Add your navbar here with all the pages linked to it-->
-    <nav class="navbar">
-        <div class="navbar-brand">Amazon logo</div>
-        <ul class="navbar-links">
-
-            <li><a href="\index.html">Home</a></li>
-            <li><a href="\product.html">Products</a></li>
-            <li><a href="\login.html">Login</a></li>
-            <li><a href="\Signup.html">Signup</a></li>
-            <li><a href="\contactus.html">Contact Us</a></li>
-
-           
-
-        </ul>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="Assets/icons8-amazon-50.png" alt="">
+            </div>
+            <div class="location">
+                <span>Deliver to Thane 400601</span>
+                <a class="Updateclass" href="#">Update location</a>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button>
+                    <img src="Assets/magnifying-glass.png" alt="Search Icon">
+                </button>
+            </div>
+            <div class="account-links">
+                <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/login.html">Login</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/Signup.html">SignUp</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/product.html" class="cart">
+                <img src="Assets/icons8-cart-50.png" alt="Cart Icon">
+                Our Products
+            </a></div>
+            <div><a href="http://127.0.0.1:5501/Amazon-Hacktoberfest2024/contactus.html">Contact Us</a></div>
+            </div>
+        </div>
+        <div class="sub-navbar">
+            <div class="boxsub">
+            <a href="#">All</a>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Prime</a>
+            <a href="#">Customer Service</a>
+        </div>
+        </div>
+    </header>
     </nav>
 
     <!----Add cards for accesories like watch mobile et-->
@@ -33,7 +64,7 @@
 
 
     <!----Footer-->
-    <footer class="amazon-footer">
+    <div class="separation"><footer class="amazon-footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Get to Know Us</h3>
@@ -87,6 +118,7 @@
             </div>
         </div>
     </footer>
+</div>
     <!---footer ends-->
 </body>
 

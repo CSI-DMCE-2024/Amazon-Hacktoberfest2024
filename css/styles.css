@@ -9,42 +9,122 @@ body {
 }
 
 /* Navbar Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: black; /* Navbar background color */
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    justify-content: space-between;
 }
 
-.navbar-brand {
-    color: white; /* Brand color */
-    font-size: 1.5em;
+.logo img {
+    height: 40px;
 }
 
-.navbar-links {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Align links in a row */
+.location {
+    color: #DDD;
 }
 
-.navbar-links li {
-    margin-left: 20px; /* Space between links */
+.location a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
 
-.navbar-links a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1em;
+.search-bar {
+    display: flex;
+    width: 50%;
+    margin-right: 50px;
 }
 
-.navbar-links a:hover {
-    color: #1ab188; /* Link hover color */
+.search-bar select, 
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: none;
+    outline: none;
+}
+.search-bar select:hover{
+    cursor: pointer;
+}
+.search-bar select {
+    background-color: #F3F3F3;
 }
 
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #FF9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+.account-links{
+    display: flex;
+    column-gap: 20px;
+}
+.account-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.account-links a.cart {
+    display: flex;
+    align-items: center;
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+.sub-navbar {
+    display: flex;
+    background-color:#222f3e;
+    padding: 10px 20px;
+    /* width: 100vw; */
+    justify-content: flex-start;
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.sub-navbar a:hover{
+    border: 2px solid white;
+    /* padding: 3px; */
+
+}
+.separation{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    right: 0;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .navbar {

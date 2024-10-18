@@ -29,6 +29,25 @@
 
 
     <!----Footer-->
+    <a href="#top" class="back-to-top">↑ Back to Top</a>
+
+    <!-- Anchor for the top of the page -->
+    <div id="top"></div>
+    
+    <script>
+        
+        const backToTopButton = document.querySelector('.back-to-top');
+    
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+    </script>
+    
     <!---footer ends-->
 </body>
 

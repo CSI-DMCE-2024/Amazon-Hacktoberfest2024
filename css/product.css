@@ -3,6 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .product-container {
@@ -52,4 +53,28 @@ h1 {
 
 .add-to-cart:hover {
     background-color: #0056b3;
+}
+
+.bakt_to_top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: none;  
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;  
+}
+
+.show {
+    display: block !important;
 }

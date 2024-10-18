@@ -61,3 +61,29 @@ body {
         margin: 10px 0; /* Space between links */
     }
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: none; 
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+/* Show the button when scrolled down */
+.show {
+    display: block !important;
+}
+

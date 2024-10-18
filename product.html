@@ -13,5 +13,26 @@
     <!------footer ends-->
 
     <script src="/js/Addtocart.js"></script>
+    <!-- Back to Top Button -->
+<a href="#top" class="back-to-top">↑ Back_to_Top</a>
+
+<!-- Ensure this is at the top of the page -->
+<div id="top"></div>
+
+<script>
+    
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Show or hide the button 
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
+</script>
+
+
 </body>
 </html>

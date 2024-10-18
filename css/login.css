@@ -1,73 +1,177 @@
+/* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    background-color: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-.login-container {
-    max-width: 400px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-.login-form {
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Navbar background color */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-label {
-    margin: 10px 0 5px;
-    color: #555;
+.navbar-brand {
+    color: white; /* Brand color */
+    font-size: 1.5em;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align links in a row */
+}
+
+.navbar-links li {
+    margin-left: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em;
+}
+
+.navbar-links a:hover {
+    color: #1ab188; /* Link hover color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+    }
+    
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px;
+        align-items: center; /* Center the links */
+    }
+    
+    .navbar-links li {
+        margin: 10px 0; /* Space between links */
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 120px;
     margin-bottom: 20px;
 }
 
-input:focus {
-    border-color: #007BFF;
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px rgba(228, 121, 17, 0.5);
     outline: none;
 }
 
-button {
+.login-button {
+    width: 100%;
     padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.login-button:hover {
+    background-color: #ddb347;
 }
 
-.signup-link {
-    text-align: center;
-    margin-top: 10px;
+.help-text {
+    font-size: 12px;
+    color: #555;
+    margin-top: 15px;
 }
 
-.signup-link a {
-    color: #007BFF;
+a {
+    color: #0066c0;
     text-decoration: none;
 }
 
-.signup-link a:hover {
+a:hover {
     text-decoration: underline;
+}
+
+.new-account {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.create-account-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e7e9ec;
+    border: 1px solid #adb1b8;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.create-account-button:hover {
+    background-color: #d7d9dc;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login-box {
+        width: 100%;
+        padding: 15px;
+        margin: 0 10px;
+    }
+    
+    .login-button, .create-account-button {
+        padding: 12px;
+    }
 }

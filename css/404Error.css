@@ -1,0 +1,99 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.error-page {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
+}
+
+.error-page:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Shadow effect on hover */
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #00ffcc; /* Neon light turquoise */
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00ffcc;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7), 0 0 30px rgba(0, 255, 204, 0.5);
+}
+
+.home-btn:hover {
+    color: white;
+    background-color: #00e6b8;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 1), 0 0 60px rgba(0, 255, 204, 0.7);
+    transition: 0.4s ease;
+}
+
+/* Fade-in effect for the page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .error-page {
+        padding: 30px;
+    }
+}

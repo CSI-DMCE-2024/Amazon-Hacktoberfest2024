@@ -225,3 +225,60 @@ footer {
         font-size: 14px;
     }
 }
+
+/* CSS for products*/
+.hero-section img{
+    width: 100%;
+}
+.hero-msg p{
+    background-color: #e2e7e6;
+    color: black;
+    height: 50px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+    margin-left: 320px;
+    
+    
+}
+.hero-msg a{
+    color: #007185;
+    margin-top: 4px;
+}
+
+.box{
+    border:2px solid white;
+    height: 365px;
+    width: 22.5%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-bottom: 15px;
+}
+
+.shop-section{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    margin-top: 50px;
+}
+
+.box img{
+    height: 300px;
+    width:90%;
+    margin-top: 10px;
+}
+.box-content{
+    margin-left: 18px;
+    margin-top: 5px;
+}
+.box a{
+    color:#007185;
+}
+.box h2{
+    margin-top:0;
+    font-weight: bolder;
+    font-size: 20px;
+}

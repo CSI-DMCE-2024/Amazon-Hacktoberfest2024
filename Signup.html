@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-   <link rel="stylesheet" href="/css/signup.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-brand">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>                 
+
+<body>          
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="Assets/icons8-amazon-50.png" alt="">
+            </div>
+            <div class="location">
+                <span>Deliver to Thane 400601</span>
+                <a class="Updateclass" href="#">Update location</a>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button>
+                    <img src="Assets/magnifying-glass.png" alt="Search Icon">
+                </button>
+            </div>
+            <div class="account-links">
+                <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/login.html">Login</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/Signup.html">SignUp</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/product.html" class="cart">
+                <img src="Assets/icons8-cart-50.png" alt="Cart Icon">
+                Our Products
+            </a></div>
+            <div><a href="http://127.0.0.1:5501/Amazon-Hacktoberfest2024/contactus.html">Contact Us</a></div>
+            </div>
         </div>
-    
-        <ul class="navbar-links">
-            <li><a href="\index.html" class="nav-link">Home</a></li>
-            <li><a href="\product.html" class="nav-link">Products</a></li>
-            <li><a href="\login.html" class="nav-link">Login</a></li>
-            <li><a href="\Signup.html" class="nav-link">Signup</a></li>
-            <li><a href="\contactus.html" class="nav-link active">Contact Us</a></li>
-        </ul>
-    
-        <div class="menu-icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="sub-navbar">
+            <div class="boxsub">
+            <a href="#">All</a>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Prime</a>
+            <a href="#">Customer Service</a>
         </div>
+        </div>
+    </header>
     </nav>
-    
-    <div class="signup-container">
-        <div class="signup-header">
-            <h1>Create Your Account</h1>
-        </div>
-        <form class="signup-form" action="/signup" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
+    <!----signup page with hover effect and responsiveness-->
+    <h1>signup</h1>
 </body>
+
 </html>

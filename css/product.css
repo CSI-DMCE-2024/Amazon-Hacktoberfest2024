@@ -1,61 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    position: relative;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black; /* Navbar background color */
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar-brand {
-    color: white; /* Brand color */
-    font-size: 1.5em;
-}
-
-.navbar-links {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Align links in a row */
-}
-
-.navbar-links li {
-    margin-left: 20px; /* Space between links */
-}
-
-.navbar-links a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1em;
-}
-
-.navbar-links a:hover {
-    color: #1ab188; /* Link hover color */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack links vertically */
-    }
-    
-    .navbar-links {
-        flex-direction: column; /* Stack links vertically */
-        margin-top: 10px;
-        align-items: center; /* Center the links */
-    }
-    
-    .navbar-links li {
-        margin: 10px 0; /* Space between links */
-    }
 }
 
 .product-container {
@@ -107,31 +58,7 @@ h1 {
     background-color: #0056b3;
 }
 
-
-.back_to_top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF; 
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    display: none;  
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-.back-to-top:hover {
-    background-color: #0056b3;  
-}
-
-.show {
-    display: block !important;
-
-
+/* Temporary styling for sample products */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -146,6 +73,7 @@ h1, h2 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 .products-grid {
@@ -315,5 +243,142 @@ footer {
     .footer-bottom {
         font-size: 14px;
     }
+}
 
+
+.sep{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.location {
+    color: #DDD;
+}
+
+.location a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    width: 50%;
+    margin-right: 50px;
+}
+
+.search-bar select, 
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: none;
+    outline: none;
+}
+.search-bar select:hover{
+    cursor: pointer;
+}
+.search-bar select {
+    background-color: #F3F3F3;
+}
+
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #FF9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+.account-links{
+    display: flex;
+    column-gap: 20px;
+}
+.account-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.account-links a.cart {
+    display: flex;
+    align-items: center;
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+.sub-navbar {
+    display: flex;
+    background-color:#222f3e;
+    padding: 10px 20px;
+    /* width: 100vw; */
+    justify-content: flex-start;
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.sub-navbar a:hover{
+    border: 2px solid white;
+    /* padding: 3px; */
+
+}
+.separation{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    right: 0;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+    }
+    
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px;
+        align-items: center; /* Center the links */
+    }
+    
+    .navbar-links li {
+        margin: 10px 0; /* Space between links */
+    }
 }

@@ -7,13 +7,13 @@
     <title>Amazon clone</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-
+          
 <body>
-    <!-- -Add your navbar here with all the pages linked to it -->
-    <div class="separator"><header>
+    <!---Add your navbar here with all the pages linked to it-->
+    <header>
         <div class="navbar">
             <div class="logo">
-                <img src="Asset/icons8-amazon-50.png" alt="">
+                <img src="Assets/icons8-amazon-50.png" alt="">
             </div>
             <div class="location">
                 <span>Deliver to Thane 400601</span>
@@ -25,16 +25,17 @@
                 </select>
                 <input type="text" placeholder="Search Amazon.in">
                 <button>
-                    <img src="Asset/magnifying-glass.png" alt="Search Icon">
+                    <img src="Assets/magnifying-glass.png" alt="Search Icon">
                 </button>
             </div>
             <div class="account-links">
-                <div><a href="#">Hello, sign in <br> Account & Lists</a></div>
-            <div><a href="#">Returns <br> & Orders</a></div>
-        <div><a href="#" class="cart">
-                    <img src="Asset/icons8-cart-50.png" alt="Cart Icon">
-                    Cart
-                </a></div>
+                <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/login.html">Login</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/Signup.html">SignUp</a></div>
+            <div><a href="http://127.0.0.1:3002/Amazon-Hacktoberfest2024/product.html" class="cart">
+                <img src="Assets/icons8-cart-50.png" alt="Cart Icon">
+                Our Products
+            </a></div>
+            <div><a href="http://127.0.0.1:5501/Amazon-Hacktoberfest2024/contactus.html">Contact Us</a></div>
             </div>
         </div>
         <div class="sub-navbar">
@@ -53,80 +54,17 @@
         </div>
         </div>
     </header>
+    </nav>
 
     <!----Add cards for accesories like watch mobile et-->
 
-    <div class="shop-section">
-        <div class="box1 box">
-            <div class="box-content"><h2>Health & Personal Care</h2>
-                <img src="Asset/box2_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-        <div class="box2 box">
-            <div class="box-content"><h2>Furniture</h2>
-                <img src="Asset/box3_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-        <div class="box3 box">
-            <div class="box-content"><h2>Beauty Picks</h2>
-                <img src="Asset/box5_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-    
-        <div class="box4 box">
-            <div class="box-content"><h2>Kids Toys</h2>
-                <img src="Asset/box7_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-        <div class="box1 box">
-            <div class="box-content"><h2>Pet Care</h2>
-                <img src="Asset/box6_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-        <div class="box2 box">
-            <div class="box-content"><h2>New Arrivals in Clothes</h2>
-                <img src="Asset/box8_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-        <div class="box3 box">
-            <div class="box-content"><h2>Electronics</h2>
-                <img src="Asset/box4_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-    
-        <div class="box4 box">
-            <div class="box-content"><h2>Wardrobe</h2>
-                <img src="Asset/box1_image.jpg" alt="">
-            <a>Shop now</a></div>
-        </div>
-    </div>
+
 
     <!---ends--->
 
 
     <!----Footer-->
-
-    <a href="#top" class="back-to-top">↑ Back to Top</a>
-
-    <!-- Anchor for the top of the page -->
-    <div id="top"></div>
-    
-    <script>
-        
-        const backToTopButton = document.querySelector('.back-to-top');
-    
-        
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        };
-    </script>
-    
-
-    <footer class="amazon-footer">
+    <div class="separation"><footer class="amazon-footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Get to Know Us</h3>
@@ -181,7 +119,6 @@
         </div>
     </footer>
 </div>
-
     <!---footer ends-->
 </body>
 

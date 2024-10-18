@@ -1,160 +1,132 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.navbar {
-    background-color: #2d80de;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease-in-out, padding 0.3s;
-    box-shadow: 0 2px 10px rgba(232, 163, 163, 0.1);
+    box-sizing: border-box;
 }
 
-.navbar:hover {
-    background-color: #61b2e0;
-    padding: 15px 50px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-/* Brand Logo */
-.navbar-brand img {
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.1);
-}
-
-/* Navbar Links */
-.navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.navbar-links .nav-link {
-    text-decoration: none;
+header {
+    background-color: #131921;
     color: white;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    height: 55px;
 }
 
-.navbar-links .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff9900;
-    left: 0;
-    bottom: -5px;
-    transition: width 0.4s;
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar-links .nav-link:hover::after {
-    width: 100%;
+.logo img {
+    height: 40px;
 }
 
-.navbar-links .nav-link:hover {
-    color: #ff9900;
+.location {
+    color: #DDD;
 }
 
-/* Active Link */
-.navbar-links .active {
-    color: #ff9900;
-}
-
-/* Mobile Menu Icon */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #232f3e;
-        flex-direction: column;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s;
-    }
-
-    .navbar-links.open {
-        max-height: 300px;
-    }
-
-    .menu-icon {
-        display: flex;
-    }
-}
-
-.signup-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-.signup-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.signup-header h1 {
-    font-size: 24px;
-    margin: 0;
-    color: #0277bd;
-}
-.signup-form {
+.location a {
+    color: white;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
-.signup-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #01579b;
+
+.search-bar {
+    display: flex;
+    width: 50%;
+    margin-right: 50px;
 }
-.signup-form input {
+
+.search-bar select, 
+.search-bar input {
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #b3e5fc;
-    border-radius: 4px;
-}
-.signup-form button {
-    padding: 10px;
-    background-color: #0288d1;
-    color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: none;
+    outline: none;
+}
+.search-bar select:hover{
     cursor: pointer;
 }
-.signup-form button:hover {
-    background-color: #0277bd;
+.search-bar select {
+    background-color: #F3F3F3;
+}
+
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #FF9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+.account-links{
+    display: flex;
+    column-gap: 20px;
+}
+.account-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.account-links a.cart {
+    display: flex;
+    align-items: center;
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+.sub-navbar {
+    display: flex;
+    background-color:#222f3e;
+    padding: 10px 20px;
+    /* width: 100vw; */
+    justify-content: flex-start;
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.sub-navbar a:hover{
+    border: 2px solid white;
+    /* padding: 3px; */
+
+}
+.separation{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    right: 0;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+    }
+    
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px;
+        align-items: center; /* Center the links */
+    }
+    
+    .navbar-links li {
+        margin: 10px 0; /* Space between links */
+    }
 }

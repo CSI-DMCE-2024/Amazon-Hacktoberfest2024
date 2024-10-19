@@ -106,19 +106,27 @@ p {
 
 body {
     font-family: Arial, sans-serif;
+    padding-top: 95px; /* Account for both navbar and sub-navbar height */
 }
 
+/* Header Styles */
 header {
     background-color: #131921;
     color: white;
     padding: 10px 20px;
     height: 55px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar above other content */
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo img {
@@ -138,20 +146,21 @@ header {
 
 .search-bar {
     display: flex;
-    width: 50%;
-    margin-right: 50px;
+    flex-grow: 1; /* Ensure the search bar expands */
+    margin-right: 20px;
 }
 
 .search-bar select, 
 .search-bar input {
     padding: 10px;
     border: none;
-    border-radius: none;
     outline: none;
 }
-.search-bar select:hover{
+
+.search-bar select:hover {
     cursor: pointer;
 }
+
 .search-bar select {
     background-color: #F3F3F3;
 }
@@ -170,10 +179,12 @@ header {
 .search-bar button img {
     height: 20px;
 }
-.account-links{
+
+.account-links {
     display: flex;
     column-gap: 20px;
 }
+
 .account-links a {
     color: white;
     text-decoration: none;
@@ -189,12 +200,19 @@ header {
     height: 20px;
     margin-right: 5px;
 }
+
+/* Sub-navbar styling */
 .sub-navbar {
     display: flex;
-    background-color:#222f3e;
+    background-color: #222f3e;
     padding: 10px 20px;
-    /* width: 100vw; */
     justify-content: flex-start;
+    position: fixed; /* Stick the sub-navbar below the main navbar */
+    top: 55px; /* Place it right below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Slightly lower z-index than the main navbar */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .sub-navbar a {
@@ -203,30 +221,13 @@ header {
     margin-right: 15px;
     font-size: 14px;
 }
-.sub-navbar a:hover{
-    border: 2px solid white;
-    /* padding: 3px; */
 
+.sub-navbar a:hover {
+    border: 2px solid white;
+    padding: 3px;
 }
-.separation{
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    right: 0;
-}
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack links vertically */
-    }
-    
-    .navbar-links {
-        flex-direction: column; /* Stack links vertically */
-        margin-top: 10px;
-        align-items: center; /* Center the links */
-    }
-    
-    .navbar-links li {
-        margin: 10px 0; /* Space between links */
-    }
+
+/* Separation to prevent content from hiding behind navbars */
+.separation {
+    margin-top: 95px; /* Ensure separation below the combined navbars */
 }

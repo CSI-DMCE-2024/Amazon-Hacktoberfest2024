@@ -1,14 +1,133 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 95px; /* Account for both navbar and sub-navbar height */
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar above other content */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.location {
+    color: #DDD;
+}
+
+.location a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1; /* Ensure the search bar expands */
+    margin-right: 20px;
+}
+
+.search-bar select, 
+.search-bar input {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-bar select:hover {
+    cursor: pointer;
+}
+
+.search-bar select {
+    background-color: #F3F3F3;
+}
+
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #FF9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+
+.account-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.account-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.account-links a.cart {
+    display: flex;
+    align-items: center;
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Sub-navbar styling */
+.sub-navbar {
+    display: flex;
+    background-color: #222f3e;
+    padding: 10px 20px;
+    justify-content: flex-start;
+    position: fixed; /* Stick the sub-navbar below the main navbar */
+    top: 55px; /* Place it right below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Slightly lower z-index than the main navbar */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.sub-navbar a:hover {
+    border: 2px solid white;
+    padding: 3px;
+}
+
+/* Product Container */
 .product-container {
     display: flex;
     max-width: 800px;
@@ -59,13 +178,6 @@ h1 {
 }
 
 /* Temporary styling for sample products */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
 h1, h2 {
     text-align: center;
 }
@@ -114,22 +226,25 @@ h1, h2 {
 .add-to-cart:hover {
     background-color: #218838;
 }
+
 @media screen and (max-width: 450px) {
-    .products-grid{
+    .products-grid {
         display: flex;
         flex-direction: column;
     }
-    .horizontal-scroll{
+    .horizontal-scroll {
         display: flex;
         flex-direction: column;
         overflow-y: auto;
     }
-  }
+}
+
 .horizontal-scroll {
     display: flex;
     overflow-x: auto;
     padding: 20px;
 }
+
 .scroll-card {
     background-color: white;
     border-radius: 8px;
@@ -245,8 +360,12 @@ footer {
     }
 }
 
+/* Separation to prevent content from hiding behind navbars */
+.separation {
+    margin-top: 95px; /* Ensure separation below the combined navbars */
+}
 
-.sep{
+.sep {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -254,131 +373,4 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #131921;
-    color: white;
-    padding: 10px 20px;
-    height: 55px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.location {
-    color: #DDD;
-}
-
-.location a {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-}
-
-.search-bar {
-    display: flex;
-    width: 50%;
-    margin-right: 50px;
-}
-
-.search-bar select, 
-.search-bar input {
-    padding: 10px;
-    border: none;
-    border-radius: none;
-    outline: none;
-}
-.search-bar select:hover{
-    cursor: pointer;
-}
-.search-bar select {
-    background-color: #F3F3F3;
-}
-
-.search-bar input {
-    flex-grow: 1;
-}
-
-.search-bar button {
-    background-color: #FF9900;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.search-bar button img {
-    height: 20px;
-}
-.account-links{
-    display: flex;
-    column-gap: 20px;
-}
-.account-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.account-links a.cart {
-    display: flex;
-    align-items: center;
-}
-
-.account-links a.cart img {
-    height: 20px;
-    margin-right: 5px;
-}
-.sub-navbar {
-    display: flex;
-    background-color:#222f3e;
-    padding: 10px 20px;
-    /* width: 100vw; */
-    justify-content: flex-start;
-}
-
-.sub-navbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-    font-size: 14px;
-}
-.sub-navbar a:hover{
-    border: 2px solid white;
-    /* padding: 3px; */
-
-}
-.separation{
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    right: 0;
-}
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack links vertically */
-    }
-    
-    .navbar-links {
-        flex-direction: column; /* Stack links vertically */
-        margin-top: 10px;
-        align-items: center; /* Center the links */
-    }
-    
-    .navbar-links li {
-        margin: 10px 0; /* Space between links */
-    }
 }

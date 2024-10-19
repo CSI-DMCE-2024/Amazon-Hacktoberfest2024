@@ -6,19 +6,27 @@
 
 body {
     font-family: Arial, sans-serif;
+    padding-top: 95px; /* Account for both navbar and sub-navbar height */
 }
 
+/* Header Styles */
 header {
     background-color: #131921;
     color: white;
     padding: 10px 20px;
     height: 55px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar above other content */
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo img {
@@ -38,20 +46,21 @@ header {
 
 .search-bar {
     display: flex;
-    width: 50%;
-    margin-right: 50px;
+    flex-grow: 1; /* Ensure the search bar expands */
+    margin-right: 20px;
 }
 
 .search-bar select, 
 .search-bar input {
     padding: 10px;
     border: none;
-    border-radius: none;
     outline: none;
 }
-.search-bar select:hover{
+
+.search-bar select:hover {
     cursor: pointer;
 }
+
 .search-bar select {
     background-color: #F3F3F3;
 }
@@ -70,10 +79,12 @@ header {
 .search-bar button img {
     height: 20px;
 }
-.account-links{
+
+.account-links {
     display: flex;
     column-gap: 20px;
 }
+
 .account-links a {
     color: white;
     text-decoration: none;
@@ -89,12 +100,19 @@ header {
     height: 20px;
     margin-right: 5px;
 }
+
+/* Sub-navbar styling */
 .sub-navbar {
     display: flex;
-    background-color:#222f3e;
+    background-color: #222f3e;
     padding: 10px 20px;
-    /* width: 100vw; */
     justify-content: flex-start;
+    position: fixed; /* Stick the sub-navbar below the main navbar */
+    top: 55px; /* Place it right below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Slightly lower z-index than the main navbar */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .sub-navbar a {
@@ -103,30 +121,189 @@ header {
     margin-right: 15px;
     font-size: 14px;
 }
-.sub-navbar a:hover{
-    border: 2px solid white;
-    /* padding: 3px; */
 
+.sub-navbar a:hover {
+    border: 2px solid white;
+    padding: 3px;
 }
-.separation{
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    right: 0;
+
+/* Separation to prevent content from hiding behind navbars */
+.separation {
+    margin-top: 95px; /* Ensure separation below the combined navbars */
 }
-/* Responsive styles */
-@media (max-width: 768px) {
+
+/* Base styles for the container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/* Container and Form Box */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Add horizontal margin for smaller screens */
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button Hover Effect */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #e6b03a;
+}
+
+/* Text Link */
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for various screen sizes */
+
+/* Mobile Devices */
+@media (max-width: 480px) {
     .navbar {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column; /* Stack navbar elements vertically */
+        align-items: center; /* Center content in smaller screens */
     }
-    
-    .navbar-links {
-        flex-direction: column; /* Stack links vertically */
+
+    .search-bar {
+        width: 100%; /* Ensure the search bar takes full width on small screens */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add spacing at the bottom */
+    }
+
+    .account-links {
         margin-top: 10px;
-        align-items: center; /* Center the links */
+        flex-direction: column; /* Stack account links vertically */
+        align-items: center; /* Center account links */
     }
-    
-    .navbar-links li {
-        margin: 10px 0; /* Space between links */
+
+    .account-links a {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 5px; /* Add space between links */
+    }
+
+    .sub-navbar {
+        flex-direction: column; /* Stack sub-navbar links vertically */
+        align-items: center; /* Center sub-navbar links */
+    }
+
+    .sub-navbar a {
+        margin-bottom: 10px; /* Space between links */
+    }
+
+    .container {
+        padding: 15px;
+        width: calc(100% - 30px); /* Adjust width for mobile */
+    }
+
+    .signup-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Horizontal layout for tablets */
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: auto; /* Reset width */
+    }
+
+    .account-links {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    .sub-navbar {
+        flex-direction: row; /* Horizontal layout */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .container {
+        max-width: 90%; /* Increase container width */
+        padding: 20px;
+    }
+
+    .signup-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+    .navbar {
+        justify-content: space-between; /* Horizontal layout */
+    }
+
+    .sub-navbar {
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .container {
+        max-width: 400px; /* Max width for larger screens */
+        padding: 20px;
+    }
+
+    .signup-btn {
+        padding: 12px;
+        font-size: 16px;
     }
 }

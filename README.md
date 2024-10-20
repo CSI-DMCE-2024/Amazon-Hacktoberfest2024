@@ -10,7 +10,7 @@ bash git clone https://github.com/CSI-DMCE-2024/Amazon-Hacktoberfest2024.git
 cd Amazon 
 
 
-##Steps to Contribute:
+## Steps to Contribute:
 
 #### 1. Fork the repository.
 

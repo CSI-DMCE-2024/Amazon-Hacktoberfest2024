@@ -158,7 +158,45 @@
         <p>Price: $20</p>
         <button onclick="addToCart('Product 3', 20)">Add to Cart</button>
     </div>
-
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItems = document.querySelector('.cart-items');
+    const cartTotal = document.querySelector('.cart-total');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', event => {
+            const productId = button.closest('.product').id;
+            const product = productsData.find(p => p.id === productId); // Replace with your product data
+    
+            // Check if the product is already in the cart
+            const existingCartItem = cartItems.querySelector(`[data-product-id="${productId}"]`);
+            if (existingCartItem) {
+                const quantity = parseInt(existingCartItem.querySelector('.quantity').textContent);
+                existingCartItem.querySelector('.quantity').textContent = quantity + 1;
+            } else {
+                const cartItem = document.createElement('li');
+                cartItem.setAttribute('data-product-id', productId);
+                cartItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <span>${product.name}</span>
+                    <span class="quantity">1</span>
+                    <span class="price">${product.price}</span>
+                `;
+                cartItems.appendChild(cartItem);
+            }
+    
+            // Update cart total
+            updateCartTotal();
+        });
+    });
+    
+    function updateCartTotal() {
+        const cartItemPrices = cartItems.querySelectorAll('.price');
+        let total = 0;
+        cartItemPrices.forEach(priceElement => {
+            total += parseFloat(priceElement.textContent);
+        });
+        cartTotal.textContent = total.toFixed(2);
+    }
     <!-- Cart Section -->
     <div class="cart">
         <h2>Shopping Cart</h2>

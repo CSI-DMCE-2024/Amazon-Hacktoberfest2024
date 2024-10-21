@@ -1,8 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
     margin: 0;
     padding: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,18 +36,67 @@ h1 {
     to { transform: translateY(0); opacity: 1; }
 }
 .contact-form {
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 95px; /* Account for both navbar and sub-navbar height */
+}
+
+/* Header Styles */
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar above other content */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.location {
+    color: #DDD;
+}
+
+.location a {
+    color: white;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
+
 
 label {
     margin: 10px 0 5px;
     color: #555;
     font-weight: bold;
+
+.search-bar {
+    display: flex;
+    flex-grow: 1; /* Ensure the search bar expands */
+    margin-right: 20px;
+
 }
 
-input, textarea {
+.search-bar select, 
+.search-bar input {
     padding: 10px;
+
     border: 1px solid #ccc;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -59,13 +107,178 @@ input:focus, textarea:focus {
     border-color: #007BFF;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+    border: none;
+    outline: none;
 }
 
+.search-bar select:hover {
+    cursor: pointer;
+}
+
+.search-bar select {
+    background-color: #F3F3F3;
+}
+
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #FF9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+
+.account-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.account-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.account-links a.cart {
+    display: flex;
+    align-items: center;
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Sub-navbar styling */
+.sub-navbar {
+    display: flex;
+    background-color: #222f3e;
+    padding: 10px 20px;
+    justify-content: flex-start;
+    position: fixed; /* Stick the sub-navbar below the main navbar */
+    top: 55px; /* Place it right below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Slightly lower z-index than the main navbar */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.sub-navbar a:hover {
+    border: 2px solid white;
+    padding: 3px;
+}
+
+/* Separation to prevent content from hiding behind navbars */
+.separation {
+    margin-top: 95px; /* Ensure separation below the combined navbars */
+}
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #232f3e;
+}
+
+.contact-container p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 20px; /* Space between the items */
+    margin-bottom: 50px; /* Margin for spacing */
+}
+
+.customer-support {
+    flex: 1; /* Allow the customer support section to take equal space */
+    padding: 20px; /* Added padding for better spacing */
+    border: 1px solid #ddd; /* Added a border for distinction */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #f9f9f9; /* Light background for contrast */
+    animation: slideIn 0.8s ease-in-out; /* Animation for this section */
+}
+
+.customer-support h3 {
+    color: #232f3e; /* Adjust header color for emphasis */
+
+}
+
+.contact-details {
+    color: #555; /* Dark gray color for readability */
+    line-height: 1.5;
+    text-align: left; 
+    font-size: 16px; /* Font size for better visibility */
+    margin-top: 10px; /* Space above the details for separation */
+}
+
+.map-container {
+    flex: 1; /* Allow the map to take equal space */
+    padding: 20px; /* Added padding for better spacing */
+    border: 1px solid #ddd; /* Added a border for distinction */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Contact Form Styling */
+.contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+}
+
+/* Submit Button Styling */
 button {
-    padding: 10px;
-    background-color: #007BFF;
+    background-color: #232f3e;
     color: white;
     border: none;
+
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
@@ -78,4 +291,59 @@ button:hover {
 }
 button:active{
     transform: translateY(1px);
+
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #131a22;
+    transform: scale(1.05);
+
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #232f3e;
+    color: white;
 }

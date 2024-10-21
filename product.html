@@ -1,17 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="/css/product.css">
-</head>
-<body>
+</head>                
+
+<body>   
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/Asset/icons8-amazon-50.png"></a>  
+            </div>
+            <div class="location">
+                <span>Deliver to Thane 400601</span>
+                <a class="Updateclass" href="#">Update location</a>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>All</option>          
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button>
+                    <img src="/Asset/magnifying-glass.png" alt="Search Icon">
+                </button>
+            </div>
+            <div class="account-links">
+                <div><a href="/login.html">Login</a></div>
+            <div><a href="/Signup.html">SignUp</a></div>
+            <div><a href="/product.html" class="cart">
+                <img src="/Asset/icons8-cart-50.png" alt="Cart Icon">
+                Our Products
+            </a></div>
+            <div><a href="/contactus.html">Contact Us</a></div>
+            </div>
+        </div>
+        <div class="sub-navbar">
+            <div class="boxsub">
+            <a href="#">All</a>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Prime</a>
+            <a href="#">Customer Service</a>
+        </div>
+        </div>
+    </header>
+</div>
+
     <!----create products cards here with hover effect and responsiveness------>
-    <h>products page</h>
+    <div class="container">
+        <h1>Featured Products</h1>
+        <div class="products-grid">
+            <!-- Six cards of the same product type -->
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/images-3.jpeg" alt="Product 1">
+                <h3>Phones</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/editing-laptop-2048px-231551-2x1-1.jpg.webp" alt="Product 2">
+                <h3>Laptops</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/gaming-pc.jpeg" alt="Product 3">
+                <h3>PCs</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/images-3 2.jpeg" alt="Product 4">
+                <h3>Apple Products</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/Designer-27-1.jpeg" alt="Product 5">
+                <h3>Home Appliances</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img height="300px"; width="400px"; style="object-fit: cover;" src="Assets/images-1-jpeg.jpeg" alt="Product 6">
+                <h3>Electronics Accessories</h3>
+                <p>Check Here</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+
+        <h2>Other Product Types</h2>
+        <!-- Horizontal Scroller for Different Product Types -->
+        <div class="horizontal-scroll">
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/Unknown.jpeg" alt="Type 1">
+                <h4>Watches</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/ring.jpeg" alt="Type 1">
+                <h4>Ring</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/shoes.jpeg" alt="Type 1">
+                <h4>Shoe</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/blet.jpeg" alt="Type 1">
+                <h4>Belt</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/tie.webp" alt="Type 1">
+                <h4>Tie</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/handbag.jpeg" alt="Type 1">
+                <h4>Handbag</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="scroll-card">
+                <img height="225 px"; width=" 225px"; style="object-fit: cover;" src="Assets/socks.jpeg" alt="Type 1">
+                <h4>Socks n Muffler</h4>
+                <button class="add-to-cart">ADD TO CART</button>
+           
+           
+        </div>
+    </div>
+    <!--sample products list made to add "add to cart" funtionality-->
+
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Price: $10</p>
+        <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Price: $15</p>
+        <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Product 3</h2>
+        <p>Price: $20</p>
+        <button onclick="addToCart('Product 3', 20)">Add to Cart</button>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total">Total: $0</p>
+    </div>
+
     <!-----Footer---->
+    <footer class="amazon-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Devices</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell on Amazon</a></li>
+                    <li><a href="#">Sell Your Books</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                    <li><a href="#">Host an Amazon Hub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Amazon Payment Methods</h3>
+                <ul>
+                    <li><a href="#">Amazon Pay</a></li>
+                    <li><a href="#">Amazon Gift Card</a></li>
+                    <li><a href="#">Amazon Coins</a></li>
+                </ul>
+            </div>
+           
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Shipping Rates</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Manage Your Content and Devices</a></li>
+                    <li><a href="#">Amazon Assistant</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> &copy; 2023 Amazon.com, Inc. or its affiliates</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
     <!------footer ends-->
 
     <script src="/js/Addtocart.js"></script>
 </body>
+
 </html>

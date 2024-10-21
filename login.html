@@ -1,24 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="/css/login.css">
+</head>            
+   
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form class="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/Asset/icons8-amazon-50.png"></a>  
+            </div>
+            <div class="location">
+                <span>Deliver to Thane 400601</span>
+                <a class="Updateclass" href="#">Update location</a>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>All</option>          
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button>
+                    <img src="/Asset/magnifying-glass.png" alt="Search Icon">
+                </button>
+            </div>
+            <div class="account-links">
+                <div><a href="/login.html">Login</a></div>
+            <div><a href="/Signup.html">SignUp</a></div>
+            <div><a href="/product.html" class="cart">
+                <img src="/Asset/icons8-cart-50.png" alt="Cart Icon">
+                Our Products
+            </a></div>
+            <div><a href="/contactus.html">Contact Us</a></div>
+            </div>
+        </div>
+        <div class="sub-navbar">
+            <div class="boxsub">
+            <a href="#">All</a>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Prime</a>
+            <a href="#">Customer Service</a>
+        </div>
+        </div>
+    </header>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+    <!----login us page starts -->
+    <div class="container">
+        <div class="login-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Email or mobile phone number</label>
+                <input type="text" id="username" placeholder="Enter your email or mobile" required>
 
-            <button type="submit">Login</button>
-        </form>
-        <p class="signup-link">Don't have an account? <a href="#">Sign up here</a></p>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="login-button">Login</button>
+            </form>
+
+            <p class="help-text">
+                By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+            </p>
+
+            <p class="help-text">
+                <a href="#">Forgot your password?</a>
+            </p>
+
+            <div class="new-account">
+                <p>New to Amazon?</p>
+                <button class="create-account-button">Create your Amazon account</button>
+            </div>
+        </div>
     </div>
+
 </body>
+
 </html> 
+
+
+</html>
+

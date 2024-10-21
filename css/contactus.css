@@ -1,6 +1,42 @@
 * {
     margin: 0;
     padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px  rgba(0, 0, 0, 0.1);
+    width: 100%;
+    animation: fadeIn 0.5s ease;
+
+}
+@keyframes fadeIn{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    animation: slideIn 0.5s ease;
+}
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.contact-form {
+
     box-sizing: border-box;
 }
 
@@ -44,15 +80,34 @@ header {
     text-decoration: none;
 }
 
+
+label {
+    margin: 10px 0 5px;
+    color: #555;
+    font-weight: bold;
+
 .search-bar {
     display: flex;
     flex-grow: 1; /* Ensure the search bar expands */
     margin-right: 20px;
+
 }
 
 .search-bar select, 
 .search-bar input {
     padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
     border: none;
     outline: none;
 }
@@ -174,6 +229,7 @@ header {
 
 .customer-support h3 {
     color: #232f3e; /* Adjust header color for emphasis */
+
 }
 
 .contact-details {
@@ -222,6 +278,20 @@ button {
     background-color: #232f3e;
     color: white;
     border: none;
+
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3 ease , transform 0.2 ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+button:active{
+    transform: translateY(1px);
+
     padding: 15px 30px;
     cursor: pointer;
     border-radius: 5px;
@@ -232,6 +302,7 @@ button {
 button:hover {
     background-color: #131a22;
     transform: scale(1.05);
+
 }
 
 /* Responsive Layout */

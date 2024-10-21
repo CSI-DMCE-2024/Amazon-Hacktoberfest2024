@@ -3,22 +3,39 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 20px;
+    padding: 30px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px  rgba(0, 0, 0, 0.1);
+    width: 100%;
+    animation: fadeIn 0.5s ease;
+
+}
+@keyframes fadeIn{
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    animation: slideIn 0.5s ease;
 }
-
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -27,18 +44,21 @@ h1 {
 label {
     margin: 10px 0 5px;
     color: #555;
+    font-weight: bold;
 }
 
 input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 20px;
+    transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
     border-color: #007BFF;
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
@@ -46,11 +66,16 @@ button {
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3 ease , transform 0.2 ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+}
+button:active{
+    transform: translateY(1px);
 }

@@ -177,17 +177,43 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Temporary styling for sample products */
-h1, h2 {
-    text-align: center;
-}
-
-.container {
+/* Slider styling */
+.slider {
+    margin: 50px auto;
     max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
 }
 
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Product Grid Cards */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,21 +250,10 @@ h1, h2 {
 }
 
 .add-to-cart:hover {
-    background-color: #ff8c00;;
+    background-color: #ff8c00;
 }
 
-@media screen and (max-width: 450px) {
-    .products-grid {
-        display: flex;
-        flex-direction: column;
-    }
-    .horizontal-scroll {
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-    }
-}
-
+/* Horizontal Scroll Section */
 .horizontal-scroll {
     display: flex;
     overflow-x: auto;
@@ -289,13 +304,13 @@ h1, h2 {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
 }
 
-
 .product button:hover {
     background-color: #ff8c00;
     transform: translateY(-2px); 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
+/* Footer styling */
 footer {
     font-family: Arial, sans-serif;
 }
@@ -379,19 +394,4 @@ footer {
     .footer-bottom {
         font-size: 14px;
     }
-}
-
-/* Separation to prevent content from hiding behind navbars */
-.separation {
-    margin-top: 95px; /* Ensure separation below the combined navbars */
-}
-
-.sep {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
 }

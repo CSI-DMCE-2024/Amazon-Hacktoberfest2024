@@ -1,118 +1,152 @@
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    padding-top: 95px; /* Account for both navbar and sub-navbar height */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Color Variables */
+:root {
+    --primary-bg: #131921;
+    --secondary-bg: #222f3e;
+    --accent-color: #ff9900;
+    --text-light: #ddd;
+    --text-dark: #333;
+    --hover-color: #007bff;
 }
 
-/* Header Styles */
+/* Body Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 95px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header (Navbar) Styling */
 header {
-    background-color: #131921;
+    background-color: var(--primary-bg);
     color: white;
     padding: 10px 20px;
-    height: 55px;
-    position: fixed; /* Fix the navbar at the top */
+    height: 60px;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Keep navbar above other content */
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #0e1726; /* Darker background when scrolling */
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.location {
-    color: #DDD;
+.logo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-.location a {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-}
-
+/* Navbar Search Bar */
 .search-bar {
     display: flex;
-    flex-grow: 1; /* Ensure the search bar expands */
-    margin-right: 20px;
+    flex-grow: 1;
+    margin: 0 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar select, 
+.search-bar select,
 .search-bar input {
     padding: 10px;
     border: none;
     outline: none;
-}
-
-.search-bar select:hover {
-    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .search-bar select {
     background-color: #F3F3F3;
+    border-radius: 4px 0 0 4px;
 }
 
 .search-bar input {
     flex-grow: 1;
+    padding-left: 15px;
+    background-color: #fff;
 }
 
 .search-bar button {
-    background-color: #FF9900;
+    background-color: var(--accent-color);
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #e68a00;
 }
 
 .search-bar button img {
     height: 20px;
 }
 
+/* Account Links */
 .account-links {
     display: flex;
-    column-gap: 20px;
+    align-items: center;
+    gap: 20px;
 }
 
 .account-links a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-}
-
-.account-links a.cart {
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
     display: flex;
     align-items: center;
 }
 
-.account-links a.cart img {
-    height: 20px;
-    margin-right: 5px;
+.account-links a:hover {
+    color: var(--accent-color);
 }
 
-/* Sub-navbar styling */
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Sub-navbar Styling */
 .sub-navbar {
     display: flex;
-    background-color: #222f3e;
+    background-color: var(--secondary-bg);
     padding: 10px 20px;
     justify-content: flex-start;
-    position: fixed; /* Stick the sub-navbar below the main navbar */
-    top: 55px; /* Place it right below the navbar */
+    position: fixed;
+    top: 60px;
     left: 0;
     width: 100%;
-    z-index: 999; /* Slightly lower z-index than the main navbar */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    z-index: 999;
+    flex-wrap: wrap;
+    transition: background-color 0.3s ease;
 }
 
 .sub-navbar a {
@@ -120,11 +154,37 @@ header {
     text-decoration: none;
     margin-right: 15px;
     font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 .sub-navbar a:hover {
-    border: 2px solid white;
-    padding: 3px;
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.sub-navbar.sticky {
+    background-color: #1a2a3f;
+}
+
+/* Responsive Navbar Enhancements */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .account-links {
+        margin-top: 10px;
+    }
 }
 
 /* Separation to prevent content from hiding behind navbars */

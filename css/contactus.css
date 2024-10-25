@@ -10,81 +10,322 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navbar styles */
-.navbar {
-    background-color: #131921;
-    color: white;
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px rgba(228, 121, 17, 0.5);
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #ddb347;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #555;
+    margin-top: 15px;
+}
+
+a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.new-account {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.create-account-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e7e9ec;
+    border: 1px solid #adb1b8;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.create-account-button:hover {
+    background-color: #d7d9dc;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login-box {
+        width: 100%;
+        padding: 15px;
+        margin: 0 10px;
+    }
+    
+    .login-button, .create-account-button {
+        padding: 12px;
+    }
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Color Variables */
+:root {
+    --primary-bg: #131921;
+    --secondary-bg: #222f3e;
+    --accent-color: #ff9900;
+    --text-light: #ddd;
+    --text-dark: #333;
+    --hover-color: #007bff;
+}
+
+/* Body Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 95px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header (Navbar) Styling */
+header {
+    background-color: var(--primary-bg);
+    color: white;
+    padding: 10px 20px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #0e1726; /* Darker background when scrolling */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    height: 50px;
+    height: 45px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.location {
-    color: white;
+.logo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
+/* Navbar Search Bar */
 .search-bar {
     display: flex;
-    align-items: center;
-    margin-right: 20px;
+    flex-grow: 1;
+    margin: 0 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.search-bar select,
 .search-bar input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px;
     border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .search-bar select {
-    padding: 8px;
-    margin-right: 10px;
-    border-radius: 4px;
-    border: none;
+    background-color: #F3F3F3;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding-left: 15px;
+    background-color: #fff;
 }
 
 .search-bar button {
-    padding: 8px;
-    background-color: #ff9900;
+    background-color: var(--accent-color);
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #e68a00;
 }
 
 .search-bar button img {
     height: 20px;
 }
 
+/* Account Links */
+.account-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .account-links a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-}
-
-.cart img {
-    height: 30px;
-    vertical-align: middle;
-}
-
-/* Sub-navbar styles */
-.sub-navbar {
-    background-color: #232f3e;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.sub-navbar .boxsub a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+    font-weight: 500;
     font-size: 14px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
+
+.account-links a:hover {
+    color: var(--accent-color);
+}
+
+.account-links a.cart img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Sub-navbar Styling */
+.sub-navbar {
+    display: flex;
+    background-color: var(--secondary-bg);
+    padding: 10px 20px;
+    justify-content: flex-start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    flex-wrap: wrap;
+    transition: background-color 0.3s ease;
+}
+
+.sub-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.sub-navbar a:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.sub-navbar.sticky {
+    background-color: #1a2a3f;
+}
+
+/* Responsive Navbar Enhancements */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .account-links {
+        margin-top: 10px;
+    }
+}
+
 
 /* Contact form styles */
 .contact-container {
